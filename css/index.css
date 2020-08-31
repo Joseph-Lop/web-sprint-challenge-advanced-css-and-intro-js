@@ -20,10 +20,11 @@ font: inherit;
 vertical-align: baseline;  
 }
 @media(max-width: 500px){
-    nav{
-        width: 50%;
-        font-size: 2vw;
+    nav a{
+        min-width: 70%;
+        font-size: 4vw;
         padding: 5%;
+        text-align: center;
     }
     img{
         max-width: auto;
