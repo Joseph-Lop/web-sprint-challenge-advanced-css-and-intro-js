@@ -255,11 +255,11 @@ console.log(get20s(artists,'1900-2000'));
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(array,index) {
-    array.splice.index = array.index;
+    array.splice(index, 1);
     return array;
 }
 
-console.log(removeArtist(artists));  
+console.log(removeArtist(artists, 0));  
  
 
 /**
@@ -275,13 +275,14 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(array,id,name,years,genre,nationality, bio){
-    array.push({id, name, years, genre, nationality,bio});
+function addArtist(array,object){
+    array.push(object);
     return array
   }
 
-  console.log (addArtist(artists, 20, 'Joseph Lopez','1999-2020', 'Web Design', 'Mexican-American', 
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vestibulum sed arcu non odio euismod.'));
+  console.log (addArtist(artists, {id: 20, name: 'Joseph Lopez',years:'1999-2020',
+   genre:'Web Design', nationality:'Mexican-American', 
+  bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vestibulum sed arcu non odio euismod.'}));
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
