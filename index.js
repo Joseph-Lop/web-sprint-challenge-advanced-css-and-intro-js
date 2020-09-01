@@ -230,19 +230,24 @@ console.log(fixError(artists,8,'Vincent Van Dough'));
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(array, index){
-    array.index = ' The artist at index ' + this.id + ' is ' + this.name;
-    return ' The artist at index ' + this.id + ' is ' + this.name;
+    return ' The artist at index ' + array[index].id + ' is ' + array[index].name;
 }
 
+console.log(getArtistByIndex(artists,0))
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array,years){
-    array.years === name;
-    return array
+function get20s(array){
+  let died = [];
+  for (let i = 0; i < array.length; i++){
+    if (array[i].years > '1900' && array[i].years < '2000'){
+      died.push (artists[i].name);
+    }
+  }
+    return died
 }
 
-console.log(get20s(artists,'1900-2000'));
+console.log(get20s(artists))
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -275,12 +280,12 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(array,object){
-    array.push(object);
-    return array
+function addArtist(object){
+    artists.push(object);
+    return artists
   }
 
-  console.log (addArtist(artists, {id: 20, name: 'Joseph Lopez',years:'1999-2020',
+  console.log (addArtist({id: 20, name: 'Joseph Lopez',years:'1999-2020',
    genre:'Web Design', nationality:'Mexican-American', 
   bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vestibulum sed arcu non odio euismod.'}));
 
