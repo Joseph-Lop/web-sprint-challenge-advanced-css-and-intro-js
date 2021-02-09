@@ -19,6 +19,34 @@ font-size: 100%;
 font: inherit;  
 vertical-align: baseline;  
 }
+@media(max-width: 500px){
+    nav a{
+        min-width: 70%;
+        font-size: 4vw;
+        padding: 5%;
+        text-align: center;
+    }
+    img{
+        max-width: auto;
+        min-width: 350px;
+        height: auto;
+        transform: translateX(-30%) translateY(-0%);
+    }
+    .artists-container{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .bio{
+        font-size: 3vw;
+        min-width: 250%;
+        transform: translateX(-30%) translateY(-0%);
+    }
+    .title-container div{
+        min-width: 100%;
+    }
+    
+}
 /*GENERAL STYLES*/
 html{
     font-size:62.5%;
